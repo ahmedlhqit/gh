@@ -1,0 +1,26 @@
+nav {
+    background-color: #333;
+}
+
+li.nav-item {
+    font-weight: bold;
+}
+
+header {
+    height: 60vh;
+    background-position: 0 0;
+    background-clip: border-box;
+    background-image: url("../images/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header h1 {
+    padding-top: 15vw;
+    padding-bottom: 15vw;
+}
+
+img.aphoto {
+    display: block;
+    /* width: 100%; */
+    margin: 20px auto;
+}
