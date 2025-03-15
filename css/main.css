@@ -1,16 +1,75 @@
-nav {
-    background-color: #333;
+/* global shared properties */
+:root {
+    /* colors */
+    --text: #454555;
+    --background: #edeeff;
+    --primary: #4962bf;
+    --secondary: #9497cd;
+    --accent: #cfa616;
+
+    /* fonts */
+    --ar-font1 : "Noto Kufi Arabic";
 }
 
-li.nav-item {
-    font-weight: bold;
+a{color: inherit}
+
+.-ar {
+    font-family: var(--ar-font1);
+    direction: rtl;
+    text-align: start;
+}
+.-hover:hover {
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.-border-rad {
+    border-radius: 5px;
+}
+
+.-box-shadow {
+    box-shadow: 8px 3px 80px 2px rgba(136,136,136,1);
+}
+
+/* ========================================== */
+
+body {
+    background-color: var(--background);
+}
+
+
+nav.-navbar {
+    background-color: var(--primary);
+}
+
+button.-btn-lang {
+    background-color: var(--primary);
+    border: 1px solid var(--background);
+}
+button.-btn-lang:hover {
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+nav.-navbar li a {
+    color: inherit;
+}
+
+nav.-navbar li a:hover {
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+    color: white;
+    border-radius: 4px;
+}
+.-intro-bar {
+    color: var(--text);
 }
 
 header {
     height: 60vh;
     background-position: 0 0;
     background-clip: border-box;
-    background-image: url("../images/1.jpg");
+    background-image: url("../images/hq720.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -19,8 +78,23 @@ header h1 {
     padding-bottom: 15vw;
 }
 
-img.aphoto {
+.-wellcome h3 {
+    color: var(--primary);
+}
+
+.-wellcome .-sign {
+    color: var(--secondary);
+}
+
+
+
+img.-photo {
     display: block;
-    /* width: 100%; */
     margin: 20px auto;
+}
+
+footer {
+    background-color: var(--primary);
+    color: white;
+    font-size: large;
 }
