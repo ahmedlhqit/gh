@@ -11,7 +11,16 @@
     --ar-font1 : "Noto Kufi Arabic";
 }
 
-a{color: inherit}
+a{
+    color: var(--primary);
+}
+a:hover{
+    color: var(--accent);
+}
+
+.-img {
+    object-fit:fill;
+}
 
 .-ar {
     font-family: var(--ar-font1);
@@ -31,7 +40,80 @@ a{color: inherit}
     box-shadow: 8px 3px 80px 2px rgba(136,136,136,1);
 }
 
+.-label {
+    color: var(--primary);
+    font-weight: bold;
+
+}
+
 /* ========================================== */
+/* timeline code */
+div.timeline {
+    padding: 0 30px;
+    
+}
+
+div.tl-items {
+position: relative;
+padding: 0 20px;
+}
+
+/* line */
+div.tl-items::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+
+width: 3px;
+height: 100%;
+background-color: var(--secondary);
+}
+
+div.tl-card {
+width: 100%;
+margin-top: 20px;
+padding: 10px 30px;
+background-color :var(--background);
+border-radius: 10px;
+}
+
+.tl-card .tl-title {
+text-transform: uppercase;
+color: var(--primary);
+font-weight: normal;
+margin-top: 10px;
+}
+  
+.tl-card .tl-title::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    left: -11px;
+    right: -11px;
+
+    background-color: var(--accent);
+    border: 5px solid white;
+    z-index: 10;
+    border-radius: 50%;
+}
+  
+.tl-card .tl-date {
+    font-size : 16px;
+    margin: 3px 0;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.tl-card .tl-detail {
+    color: var(--text);
+}
+
+
+/* ========================================== */
+/* page index */
 
 body {
     background-color: var(--background);
@@ -98,3 +180,29 @@ footer {
     color: white;
     font-size: large;
 }
+
+/* ========================================================= */
+/* background */
+.-info {
+    background-color: white;
+    padding: 2rem ;
+}
+
+.-info .-label {
+    color: var(--primary);
+    font-weight: bold;
+
+}
+
+.-info .-val {
+    color: var(--text);
+}
+
+.-degree dt {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+
+/* ======================================== */
+/* test */
